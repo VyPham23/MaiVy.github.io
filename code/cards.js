@@ -33,7 +33,7 @@ const shuffle = () => {
     
     for (let i = 0; i < deck.length; i++) {
         const j = Math.floor(Math.random() * deck.length);
-        const tmp = deck[i];
+        const temp = deck[i];
         deck[i] = deck[j];
         deck[j] = temp;
     }
