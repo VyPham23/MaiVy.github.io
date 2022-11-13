@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+        <link rel="manifest" href="icons/site.webmanifest">
+        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="icons/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="Kards">
+        <meta name="application-name" content="Kards">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="icons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>What To Do</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-flex">
+                <!-- <span id="sidebar-button" style="padding-left: 0.35rem" class="fa">&#9776;</span> -->
+                <h1 id="title" class="text-align-center">What To Do</h1>
+                <span style="font-size:25px;cursor:pointer;letter-spacing: 1ch;">
+                    <i title="Delete this board." id="delete-button" class="fa fa-user-circle"></i>
+                    <i title="Save all boards." id="save-button" class="fa fa-list"></i>
+                    <i title="Settings" id="settings-button" class="fa fa-gear"></i>
+                </span>
+            </div>
+        </header>
+
+        <div class="container" id="main-container">
+
+            <div class="col_container">
+                <div class="row">
+                    <div class="col">
+                        <form action="" method="post" onsubmit="return loginFunction()">
+                            <div class="form_container">
+                                <h1>Login</h1>
+                                
+                                <div class="form">
+                                    <table>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label for="email"><b>Email</b></label><br />
+                                                <input type="text" placeholder="Your Email" name="email" id="email" required />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label for="psw"><b>Password</b></label>
+                                                <input type="password" placeholder="Your Password" name="psw" id="password" required />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <hr />
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                                    <label class="form-check-label" for="flexCheckChecked"> Keep me logged in</label>
+                                </div>
+                                <br />
+                                <a class="forgot_password" href="profile/reset_password.html">Forgot password.</a>
+                                <button type="submit" class="registerbtn" ()>Login</button>
+                            </div>
+
+                            <div class="container signin" style="margin-bottom: 10px;">
+                                <p>Don't have an account yet? <a href="register.html">Sign up</a>.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
