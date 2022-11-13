@@ -19,6 +19,7 @@
 
         <link rel="stylesheet" href="css/register.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <title>What To Do</title>
     </head>
 
@@ -30,7 +31,75 @@
                 <span style="font-size:25px;cursor:pointer;letter-spacing: 1ch;">
                     <i title="Delete this board." id="delete-button" class="fa fa-user-circle"></i>
                     <i title="Save all boards." id="save-button" class="fa fa-list"></i>
-                    <i title="Settings" id="settings-button" class="fa fa-gear"></i>
                 </span>
             </div>
         </header>
+
+        <div class="container" id="personal-info">
+            <div class="userImage">
+                <img src="img/meow.jpg" class="rounded-circle" id="user_img" alt="Avatar" />
+
+                <button class="avtbtn">Change</button>
+            </div>
+
+            <div class="infor">
+                <div class="form_container">
+                    <h1 id="profile">Profile</h1> 
+                
+                    <table>
+
+                        <tr>
+                            <td colspan="2">
+                                <label for="name"><b>Name</b></label><br />
+                                <input type="text" placeholder="Lee Van K" name="name" id="name" required />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <label for="email"><b>Email</b></label><br />
+                                <input type="text" placeholder="abc@gmail.com" name="email" id="email" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="phone"><b>Phone</b></label><br />
+                                <input type="tel" placeholder="Your Phone" name="phone" id="phone" required />
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2">
+                                <label for="country"><b>Country</b></label><br />
+                                <select id="country">
+                                    <option value="0">Select:</option>
+                                    <option value="1">Vietnam</option>
+                                    <option value="2">USA</option>
+                                    <option value="3">UK</option>
+                                    <option value="4">Singapore</option>
+                                    <option value="5">Thailand</option>
+                                    <option value="6">Japan</option>
+                                    <option value="7">Korea</option>
+                                    <option value="8">China</option>
+                                    <option value="9">Germany</option>
+                                    <option value="10">France</option>
+                                </select>
+                            </td>
+                        </tr>
+                            <td colspan="2" style="display: flex;">
+                                <button class="avtbtn" id="probtn">Cancel</button>
+                                <button class="avtbtn" id="probtn">Save</button>
+                            </td>
+                        <tr>
+
+                        </tr>
+
+                    
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
