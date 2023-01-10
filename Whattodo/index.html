@@ -1,106 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-        <link rel="manifest" href="icons/site.webmanifest">
-        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="icons/favicon.ico">
-        <meta name="apple-mobile-web-app-title" content="Kards">
-        <meta name="application-name" content="Kards">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="msapplication-config" content="icons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <!--FONT FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap"
+          rel="stylesheet">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>What To Do</title>
-    </head>
-    <body>
-        <header>
-            <div class="header-flex">
-                <!-- <span id="sidebar-button" style="padding-left: 0.35rem" class="fa">&#9776;</span> -->
-                <h1 id="title" class="text-align-center">What To Do</h1>
-                <span style="font-size:25px;cursor:pointer;letter-spacing: 1ch;">
-                    <i title="Delete this board." id="delete-button" class="fa fa-user-circle"></i>
-                    <i title="Save all boards." id="save-button" class="fa fa-list"></i>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bolder;
+        }
 
-                </span>
+        main {
+            width: 90%;
+            margin: 2rem auto;
+            min-height: 500px;
+        }
+
+        a:link,
+        a:visited {
+            color: #333;
+        }
+
+        nav a:link,
+        nav a:visited {
+            /*background-color: rgba(207, 232, 220, 0.2);*/
+            /*border: 2px solid rgb(79, 185, 227);*/
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: rgba(207, 232, 220, 0.7);
+        }
+
+        article {
+            margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 700px) {
+
+            nav {
+
+            }
+
+            nav ul {
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+            }
+
+            nav li {
+            }
+        }
+
+        .main-content img {
+            width: 100%;
+        }
+
+        .main-content h1 {
+            text-align: center;
+            font-style: italic;
+            font-weight: bold
+        }
+
+        .main-content button {
+            margin: 40px 0 20px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            background-color: rgba(79, 185, 227, 0.3);
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .feedback .col-sm-2, .col-sm-8 {
+            font-style: normal;
+        }
+
+        footer {
+            background-color: #eae3d1;
+            color: black;
+            font-size: 1em;
+            font-style: normal;
+            padding: 20px;
+        }
+
+        footer i {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-journal-code"></i>
+                <span id="name-web">What To Do</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Sign up</a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <h1>Know What To Do</h1>
+                <a href="login.html">
+                    <button>GET STARTED</button>
+                </a>
 
-        <div id="sidebar" class="sidenav">
-            <span id="sidebar-close">&times;</span>
-            <p class="is-title">Lists</p>
-            <ul id="boards-list">
-                <!-- Boards will be listed here... -->
-            </ul>
-
-            <div class="flex-col">
-                <input type="text" id="add-board-text" name="add-board" placeholder="Add List...">
-                <button id="add-board-button">Add List</button>
+                <!-- <div><img src="assets/img/i.png" alt="main template"></div> -->
             </div>
-        </div>
 
-        <div id="card-context-menu" class="context-menu">
-            <!-- Right-click context menu on cards. -->
-            <ul>
-                <li id="card-context-menu-delete">Delete</li>
-                <li id="card-context-menu-clear">Clear</li>
-                <li id="card-context-menu-duplicate">Duplicate</li>
-            </ul>
-        </div>
+            <div style="text-align: center; text-transform: uppercase; padding-top: 30px">User feedback</div>
 
-        <div class="container" id="main-container">
-            <div id="cards-container">
-                <div id="e1" class="parent-card">
-                    <span>
-                        <h2 id="e1-h2" class="text-fix card-title">Untitled list 1</h2>
-                        <i aria-hidden="true" class="fa fa-bars"></i>
-                    </span>
-                    <ul id="e1-ul"></ul>
-                    <input id="e1-input" maxlength="256" type="text" name="add-todo-text" placeholder="Add Task...">
-                    <button id="e1-button" class="plus-button">+</button>
+            <div class="feedback">
+                <div class="row">
+                    <div class="col-sm-2">User-name</div>
+                    <div class="col-sm-8">Say something</div>
+                    <div class="col-sm-2">Rating</div>
                 </div>
-                <div id="e2" class="parent-card">
-                    <span><h2 id="e2-h2" class="text-fix card-title">Untitled list 2</h2>
-                        <i aria-hidden="true" class="fa fa-bars"></i>
-                    </span>
-                    <ul id="e2-ul"></ul>
-                    <input id="e2-input" maxlength="256" type="text" name="add-todo-text" placeholder="Add Task...">
-                    <button id="e2-button" class="plus-button">+</button>
-                </div>
-                <div id="add-card">
-                    <input maxlength="128" type="text" id="add-card-text" name="add-card" placeholder="Add List..." autofocus="">
-                    <button id="add-card-button" class="plus-button">+</button>
-                </div>
-
             </div>
         </div>
+    </main>
 
-        <div id="alert-container">
-            <div id="alerts">
-                <!-- alerts go here -->
-            </div>
-        </div>
-
-        <div id="confirm-dialog" class="modal">
-            <div class="dialog-content">
-                <span id="confirm-dialog-close" class="confirm-dialog-close">&times;</span>
-                <div id="confirm-dialog-text" class="confirm-dialog-text"></div>
-                <div class="confirm-dialog-actions">
-                    <button id="confirm-dialog-cancel" class="confirm-dialog-cancel"> Cancel </button>
-                    <button id="confirm-dialog-confirm" class="confirm-dialog-confirm"> Confirm </button>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <img src="" alt="">My Diary
+                    <div>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-skype"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-messenger"></i>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <a href="#">Contact us</a>
+                    <select id="inputState" class="form-control">
+                        <option selected>English</option>
+                        <option>Vietnamese</option>
+                    </select>
                 </div>
             </div>
         </div>
+    </footer>
+</div>
+</body>
 
-        <!-- <script src="js/main.js"></script> -->
-    </body>
 </html>

@@ -1,0 +1,55 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.title {
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: white;
+    border: gray solid 1px;
+    /*color: #85919e;*/
+    padding: 50px;
+    border-radius: 30px;
+    min-width: 30rem;
+    max-width: 50rem;
+}
+
+.btn {
+    background-color: #2c2b2b;
+    color: white;
+}
+
+.btn:hover {
+    color: #bcbebf;
+}
+
+input {
+    font-weight: normal;
+}
+
+a {
+    color: #00206c;
+}
+
+.form-group input{
+    font-size: 0.8em;
+}
+
+.sign-up{
+    margin: auto;
+    text-align: center;
+}

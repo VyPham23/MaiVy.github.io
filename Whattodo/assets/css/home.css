@@ -1,0 +1,93 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+}
+
+body {
+    background-color: white;
+}
+
+/* NAVIGATION BAR */
+.bi {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.bi:hover {
+    color: black;
+}
+
+nav {
+    background-color: #f1a33b;
+}
+
+#name-web {
+    color: white;
+}
+
+nav #navbarNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* CONTENT */
+/* Aside Bar */
+
+.aside-menu {
+    text-transform: uppercase;
+    float: left;
+    width: 25%;
+    background-color: #f6f5f1;
+    padding: 20px;
+    min-height: 650px;
+    /*position: fixed;*/
+}
+
+/* Main Content */
+.main-content {
+    width: 75%;
+    float: right;
+    padding: 30px;
+    border-radius: 15px;
+    height: 36em;
+    font-size: 1em;
+}
+
+.today-update {
+    height: 100%;
+    width: 100%;
+}
+
+.today-update .row {
+    border: black solid 1px;
+    border-radius: 7px;
+    margin: 20px 40px 0px 40px;
+    background-color: white;
+    padding: 10px 0 10px;
+}
+
+.form-check-label {
+    text-transform: none;
+}
+
+/* TODOS */
+.today-update {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+#tasks .form-check {
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+#tasks .form-check-label {
+    width: 99%;
+    text-align: left;
+    font-weight: bolder;
+}
+
+#tasks .form-check-label p {
+    margin-bottom: 0;
+    font-weight: normal;
+}
