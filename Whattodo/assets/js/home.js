@@ -86,13 +86,13 @@ const updateTaskList = async () => {
         });
 
         if (updateListRequest.ok) {
-            titleDiary.innerHTML = name;
+            titleWTD.innerHTML = name;
             fetchTasklist();
         } else {
-            alert("Fail to update. Please select a diary list.")
+            alert("Fail to update. Please select a list.")
         }
     } else {
-        alert("Please select a diary list to update")
+        alert("Please select a list to update")
     }
 }
 
@@ -113,14 +113,14 @@ const deleteTaskList = async () => {
                 updateTaskname.value="";
                 updateTaskDescription.value="";
 
-                titleDiary.innerHTML = "Title of Today";
+                titleWTD.innerHTML = "Title of Today";
                 fetchTasklist();
             } else {
-                alert("Fail to delete. Please select a diary list to delete.")
+                alert("Fail to delete. Please select a list to delete.")
             }
         }
     } else {
-        alert("Please select a diary list to delete.")
+        alert("Please select a list to delete.")
     }
 }
 
@@ -144,8 +144,8 @@ const refreshTasks = async () => {
         const tasks = await taskRequest.json();
         console.log(tasks);
 
-        const titleDiary = document.getElementById('titleDiary')
-        titleDiary.innerHTML = taskListHash[selectedTasklist].name;
+        const titleWTD = document.getElementById('titleWTD')
+        titleWTD.innerHTML = taskListHash[selectedTasklist].name;
 
         const form = document.getElementById('tasks');
         form.innerHTML = '';
@@ -215,10 +215,10 @@ const updateTask = async () => {
         if (createTaskRequest.ok) {
             refreshTasks();
         } else {
-            alert("Fail to update. Please select a diary.")
+            alert("Fail to update. Please select a task.")
         }
     } else {
-        alert("Please select a diary to update.")
+        alert("Please select a task to update.")
     }
 }
 
@@ -237,11 +237,11 @@ const deleteTask = async () => {
                 updateTaskDescription.value="";
                 refreshTasks();
             } else {
-                alert("Fail to delete. Please select a diary.")
+                alert("Fail to delete. Please select a task.")
             }
         }
     } else {
-        alert("Please select a diary to delete.")
+        alert("Please select a task to delete.")
     }
 }
 

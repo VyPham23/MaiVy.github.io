@@ -100,7 +100,7 @@
 
             <!--    TASK LISTS   -->
             <div class="form-group" style="margin-top: 30px">
-                <input id="myDiaryList" class="btn btn-outline-dark" type="button" onclick="fetchTasklist()"
+                <input id="myWTDList" class="btn btn-outline-dark" type="button" onclick="fetchTasklist()"
                        value="View Todo Lists"
                        style="font-weight: bold; padding: 5px 10px 5px 10px"/>
             </div>
@@ -129,21 +129,21 @@
     <div class="container main-content">
         <div class="today-title">
             <div style="border-bottom: black solid 1px; padding-bottom: 15px">
-                <span style="text-transform: uppercase; font-size: 0.9em" id="titleDiary">Know What To Do</span>
+                <span style="text-transform: uppercase; font-size: 0.9em" id="titleWTD">Know What To Do</span>
 
                 <!-- Button trigger modal -->
-                <span type="button" class="btn btn-warning" data-toggle="modal" data-target="#addNewDiary"
+                <span type="button" class="btn btn-warning" data-toggle="modal" data-target="#addNewWTD"
                       style="float: right; padding: 3px 10px 5px 10px; margin: 0 20px 0 0; font-weight: bold;">
                         Add New
                 </span>
 
                 <!-- Modal -->
-                <div class="modal fade" id="addNewDiary" tabindex="-1" role="dialog"
+                <div class="modal fade" id="addNewWTD" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h6 class="modal-title" id="addNewDiaryLabel">
+                                <h6 class="modal-title" id="addNewWTDLabel">
                                     <input type="text" id="createTaskname" placeholder="Title" style="width: 100%">
                                 </h6>
                                 <span class="time" style="text-align: right"></span>
