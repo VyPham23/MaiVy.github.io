@@ -1,4 +1,4 @@
-let serverUrl = 'http://dev.thanqminh.com:3000/';
+let serverUrl = 'http://dev.thanqminh.com:3001/';
 var user = null;
 
 const login = async () => {

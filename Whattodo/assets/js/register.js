@@ -1,4 +1,4 @@
-let serverUrl = 'http://dev.thanqminh.com:3000/';
+let serverUrl = 'http://dev.thanqminh.com:3001/';
 const register = async () => {
     let email = document.getElementById('email').value;
     let password = document.getElementById('pwd').value;
