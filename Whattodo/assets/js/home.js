@@ -1,4 +1,4 @@
-let serverUrl = 'http://dev.thanqminh.com:3001';
+let serverUrl = 'http://dev.thanqminh.com:3000/';
 var user = null;
 var selectedTasklist;
 var selectedTask;
