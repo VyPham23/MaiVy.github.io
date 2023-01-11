@@ -1,10 +1,10 @@
-let serverUrl = 'http://dev.thanqminh.com:3001';
+let serverUrl = 'http://dev.thanqminh.com:3000/';
 var user = null;
 
 const login = async () => {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
-    const response = await fetch(`${serverUrl}/auth/sign_in`, {
+    const response = await fetch(`${serverUrl}//auth/sign_in`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
