@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <canvas id="myCanvas" width="500" height="500" style="border:2px solid black"></canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+
+                const grd = ctx.createRadialGradient(410, 390, 600, 410, 440, 340);
+                grd.addColorStop(0, "orange");
+                grd.addColorStop(1, "white");
+                ctx.fillStyle = grd;
+                ctx.fillRect(0, 0, 500, 500);
+                
+                ctx.beginPath();
+                ctx.arc(250, 200, 100, 0, 2 * Math.PI);
+                ctx.fillStyle = "red";
+                ctx.globalAlpha = 0.6;
+                ctx.fill();
+            
+                ctx.beginPath();
+                ctx.moveTo(110,200);
+                ctx.lineTo(390,200);
+                ctx.lineTo(250,360);
+                ctx.lineTo(110,200);
+                ctx.fillStyle = "DodgerBlue";
+                ctx.globalAlpha = 0.4;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(250,30);
+                ctx.lineTo(300,30);
+                ctx.lineTo(250,90);
+                
+                ctx.fillStyle = "green";
+                ctx.globalAlpha = 0.7;
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.moveTo(250,355);
+                ctx.lineTo(250,500);
+                ctx.strokeStyle = "grey";
+                ctx.lineWidth = "7";
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(220,490);
+                ctx.lineTo(280,490);
+                ctx.lineTo(280,500);
+                ctx.lineTo(220,500);
+                ctx.lineTo(220,490);
+                ctx.fillStyle = "navy";
+                ctx.fill();
+
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
