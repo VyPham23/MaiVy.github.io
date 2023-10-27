@@ -10,7 +10,7 @@ function main(){
     // Tell user if their browser does not support WebGL 
     if (!gl) { 
         alert("Your browser does not support WebGL"); 
-    } 
+    }; 
 
     // Set the color of the canvas. 
     // Parameters are RGB colors (red, green, blue, alpha) 
