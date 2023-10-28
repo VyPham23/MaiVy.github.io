@@ -30,7 +30,6 @@ function main() {
     // Unbind the buffer
     gl.bindBuffer(gl.ARRAY_BUFFER, null);
 
-    /*=========================Shaders========================*/
 
     // vertex shader source code
     var vertCode =
