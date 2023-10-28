@@ -18,16 +18,12 @@ function main() {
         0.5,-0.5,0.0,
      ];
 
-    // Create an empty buffer object to store the vertex buffer
     var vertex_buffer = gl.createBuffer();
 
-    //Bind appropriate array buffer to it
     gl.bindBuffer(gl.ARRAY_BUFFER, vertex_buffer);
 
-    // Pass the vertex data to the buffer
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-    // Unbind the buffer
     gl.bindBuffer(gl.ARRAY_BUFFER, null);
 
 
@@ -80,9 +76,7 @@ function main() {
     // Use the combined shader program object
     gl.useProgram(shaderProgram);
 
-    /*======== Associating shaders to buffer objects ========*/
-
-    // Bind vertex buffer object
+    
     gl.bindBuffer(gl.ARRAY_BUFFER, vertex_buffer);
 
     // Get the attribute location
@@ -97,15 +91,11 @@ function main() {
     // Clear the canvas
     gl.clearColor(0.0, 0.0, 0.0, 0.0);
 
-    // Enable the depth test
     gl.enable(gl.DEPTH_TEST);
 
-    // Clear the color buffer bit
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    // Set the view port
     gl.viewport(0,0,canvas.width,canvas.height);
 
-    // Draw the triangle
     gl.drawArrays(gl.POINTS, 0, 3);
 };

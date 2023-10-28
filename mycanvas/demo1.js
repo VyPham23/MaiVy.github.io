@@ -12,13 +12,12 @@ function main(){
         alert("Your browser does not support WebGL"); 
     }; 
 
-    // Set the color of the canvas. 
-    // Parameters are RGB colors (red, green, blue, alpha) 
+
     gl.clearColor(0, 0.0, 0.0, 0.0); 
     // Clear the color buffer with specified color 
     gl.clear(gl.COLOR_BUFFER_BIT); 
 
-    // Define shaders: vertex shader and fragment shader 
+     
     const shaders = { 
         vs: `#version 300 es 
             in vec2 vertPosition; 
